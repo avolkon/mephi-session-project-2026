@@ -1,0 +1,57 @@
+    1  curl -s http://192.168.1.100 > ~/curl_output.txt
+    2  cat ~/curl_output.txt
+    3  sudo reboot
+    4  ls /media/sf_share
+    5  sudo dnf install -y virtualbox-guest-additions
+    6  sudo mkdir -p /mnt/share
+    7  sudo mount -t vboxsf share /mnt/share
+    8  ls /mnt/share
+    9  cp ~/project_history.txt /mnt/share/Popytka2/
+   10  cp ~/project_history.txt /mnt/share/Popitka2/
+   11  cp ~/network_check.txt /mnt/share/Popitka2
+   12  cp ~/nginx_recent_logs.txt /mnt/share/Popitka2
+   13  cp ~/fstab.txt /mnt/share/Popitka2
+   14  cp ~/selinux_status.txt /mnt/share/Popitka2
+   15  cp ~/file_contexts.txt /mnt/share/Popitka2
+   16  cp ~/tcpdump_capabilities.txt /mnt/share/Popitka2
+   17  cp ~/permissions.txt /mnt/share/Popitka2
+   18  cp ~/users_groups.txt /mnt/share/Popitka2/
+   19  cp ~/curl_output.txt /mnt/share/Popitka2/
+   20  cp ~/index.html /mnt/share/Popitka2/
+   21  cp ~/tcpdump.rpm /mnt/share/Popitka2/
+   22  ls /mnt/share/Popitka2/
+   23  wc -l ~/.bash_history
+   24  nmcli con show
+   25  sudo hostnamectl set-hostname mephi-2026.domain.local
+   26  ping -c 192.168.1.1
+   27  ping -c 4 192.168.1.1
+   28  ping -c 4 8.8.8.8
+   29  sudo dns install -y nginx
+   30  sudo dnf install -y nginx
+   31  sudo dnf install -y tcpdump
+   32  sudo dnf install -y libcap-ng-utils
+   33  sudo dnf download tcpdump
+   34  sudo rpm -i /tmp/tcpdump*.rpm
+   35  sudo rpm -i ~/tcpdump*.rpm
+   36  sudo fdisk -l /dev/sdb
+   37  grep MEPHI_DATA /etc/fstab
+   38  sudo systemctl enable nginx
+   39  sudo groupadd mephi-devs
+   40  sudo useradd -m mephi-admin
+   41  sudo usermod -aG mephi-devs mephi-admin
+   42  sudo chmod 2775 /data/mephi-web
+   43  sudo semanage fcontext -l | head -3
+   44  sudo semanage fcontext -l | grep mephi
+   45  sudo chmod u-s /usr/sbin/tcpdump
+   46  sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
+   47  cat /etc/ssh/denied_users
+   48  grep pam_listfile /etc/pam.d/login
+   49  curl http://192.168.1.100
+   50  sudo mount /data/mephi-web
+   51  history > ~/project_history.txt
+   52  cp ~/project_history.txt /mnt/share/Popitka2/
+   53  sudo restorecon -Rv /data/mephi-web
+   54  sudo mkfs.ext4 -n /dev/sdbl
+   55  sudo mkfs.ext4 -n /dev/sdb1
+   56  sudo mkfs.ext4 -n /dev/sdbl
+   57  history > ~/project_history.txt

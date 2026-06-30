@@ -1,0 +1,54 @@
+    1  systemctl start sshd
+    2  systemctl enable sshd
+    3  systemctl status sshd
+    4  exit
+    5  dnf install -y openssh -server
+    6  dnf install -y openssh-server
+    7  systemctl enable --now sshd 
+    8  firewall -cmd --permanent --add-service=ssh
+    9  dnf install -y firewalld
+   10  systemctl enable --now firewalld 
+   11  firewall -cmd --permanent --add-service=ssh
+   12  whoami
+   13  systemctl stop firewalld 
+   14  systemctl disable firewalld
+   15  systemctl status firewalld
+   16  sodo -i
+   17  sudo -i
+   18  exit
+   19  nano /etc/ssh/sshd_config
+   20  systemctl restart sshd
+   21  exit
+   22  ssh stud@127.0.0.1 -p 2222
+   23  sudo systemctl restart sshd
+   24  sudo systemctl status sshd
+   25  sudo ss -tlnp | grep 22
+   26  ssh stud@127.0.0.1 -p 2222
+   27  sudo cp /etc/ssh/sshd_config.rpmnew /etc/ssh/sshd_config 2>/dev/null || sudo dnf reinstall -y openssh-server
+   28  sudo systemctl restart sshd
+   29  sudo systemctl status sshd
+   30  ssh stud@127.0.0.1 -p 2222
+   31  where ssh
+   32  su - mephi-admin
+   33  echo "Hello from Student: avo-m25-555" | sudo tee /data/mephi-web/index.html
+   34  sed -i 's|root /usr/share/nginx/html;|root /data/mephi-web;|' /etc/nginx/nginx.conf
+   35  nginx -t
+   36  systemctl restart nginx
+   37  curl http://localhost
+   38  ls -la /data/mephi-web/
+   39  grep -n "root" /etc/nginx/nginx.conf
+   40  sed -i '36s|root /usr/share/nginx/html;|root /data/mephi-web;|' /etc/nginx/nginx.conf
+   41  nginx -t
+   42  systemctl restart nginx
+   43  curl http://localhost
+   44  rm -f /etc/nginx/conf.d/welcome.conf
+   45  systemctl restart nginx
+   46  curl http://localhost
+   47  cat /data/mephi-web/index.html
+   48  ls -Z /data/mephi-web/index.html
+   49  nginx -T 2>&1 | grep "root "
+   50  nano /etc/nginx/nginx.conf
+   51  nginx -t
+   52  systemctl restart nginx
+   53  curl http://localhost
+   54  history > ~/project_history.txt
