@@ -1,54 +1,57 @@
-    1  systemctl start sshd
-    2  systemctl enable sshd
-    3  systemctl status sshd
-    4  exit
-    5  dnf install -y openssh -server
-    6  dnf install -y openssh-server
-    7  systemctl enable --now sshd 
-    8  firewall -cmd --permanent --add-service=ssh
-    9  dnf install -y firewalld
-   10  systemctl enable --now firewalld 
-   11  firewall -cmd --permanent --add-service=ssh
-   12  whoami
-   13  systemctl stop firewalld 
-   14  systemctl disable firewalld
-   15  systemctl status firewalld
-   16  sodo -i
-   17  sudo -i
-   18  exit
-   19  nano /etc/ssh/sshd_config
-   20  systemctl restart sshd
-   21  exit
-   22  ssh stud@127.0.0.1 -p 2222
-   23  sudo systemctl restart sshd
-   24  sudo systemctl status sshd
-   25  sudo ss -tlnp | grep 22
-   26  ssh stud@127.0.0.1 -p 2222
-   27  sudo cp /etc/ssh/sshd_config.rpmnew /etc/ssh/sshd_config 2>/dev/null || sudo dnf reinstall -y openssh-server
-   28  sudo systemctl restart sshd
-   29  sudo systemctl status sshd
-   30  ssh stud@127.0.0.1 -p 2222
-   31  where ssh
-   32  su - mephi-admin
-   33  echo "Hello from Student: avo-m25-555" | sudo tee /data/mephi-web/index.html
-   34  sed -i 's|root /usr/share/nginx/html;|root /data/mephi-web;|' /etc/nginx/nginx.conf
-   35  nginx -t
-   36  systemctl restart nginx
-   37  curl http://localhost
-   38  ls -la /data/mephi-web/
-   39  grep -n "root" /etc/nginx/nginx.conf
-   40  sed -i '36s|root /usr/share/nginx/html;|root /data/mephi-web;|' /etc/nginx/nginx.conf
-   41  nginx -t
-   42  systemctl restart nginx
-   43  curl http://localhost
-   44  rm -f /etc/nginx/conf.d/welcome.conf
-   45  systemctl restart nginx
-   46  curl http://localhost
-   47  cat /data/mephi-web/index.html
-   48  ls -Z /data/mephi-web/index.html
-   49  nginx -T 2>&1 | grep "root "
-   50  nano /etc/nginx/nginx.conf
-   51  nginx -t
-   52  systemctl restart nginx
-   53  curl http://localhost
-   54  history > ~/project_history.txt
+    1  curl -s http://192.168.1.100 > ~/curl_output.txt
+    2  cat ~/curl_output.txt
+    3  sudo reboot
+    4  ls /media/sf_share
+    5  sudo dnf install -y virtualbox-guest-additions
+    6  sudo mkdir -p /mnt/share
+    7  sudo mount -t vboxsf share /mnt/share
+    8  ls /mnt/share
+    9  cp ~/project_history.txt /mnt/share/Popytka2/
+   10  cp ~/project_history.txt /mnt/share/Popitka2/
+   11  cp ~/network_check.txt /mnt/share/Popitka2
+   12  cp ~/nginx_recent_logs.txt /mnt/share/Popitka2
+   13  cp ~/fstab.txt /mnt/share/Popitka2
+   14  cp ~/selinux_status.txt /mnt/share/Popitka2
+   15  cp ~/file_contexts.txt /mnt/share/Popitka2
+   16  cp ~/tcpdump_capabilities.txt /mnt/share/Popitka2
+   17  cp ~/permissions.txt /mnt/share/Popitka2
+   18  cp ~/users_groups.txt /mnt/share/Popitka2/
+   19  cp ~/curl_output.txt /mnt/share/Popitka2/
+   20  cp ~/index.html /mnt/share/Popitka2/
+   21  cp ~/tcpdump.rpm /mnt/share/Popitka2/
+   22  ls /mnt/share/Popitka2/
+   23  wc -l ~/.bash_history
+   24  nmcli con show
+   25  sudo hostnamectl set-hostname mephi-2026.domain.local
+   26  ping -c 192.168.1.1
+   27  ping -c 4 192.168.1.1
+   28  ping -c 4 8.8.8.8
+   29  sudo dns install -y nginx
+   30  sudo dnf install -y nginx
+   31  sudo dnf install -y tcpdump
+   32  sudo dnf install -y libcap-ng-utils
+   33  sudo dnf download tcpdump
+   34  sudo rpm -i /tmp/tcpdump*.rpm
+   35  sudo rpm -i ~/tcpdump*.rpm
+   36  sudo fdisk -l /dev/sdb
+   37  grep MEPHI_DATA /etc/fstab
+   38  sudo systemctl enable nginx
+   39  sudo groupadd mephi-devs
+   40  sudo useradd -m mephi-admin
+   41  sudo usermod -aG mephi-devs mephi-admin
+   42  sudo chmod 2775 /data/mephi-web
+   43  sudo semanage fcontext -l | head -3
+   44  sudo semanage fcontext -l | grep mephi
+   45  sudo chmod u-s /usr/sbin/tcpdump
+   46  sudo setcap cap_net_raw,cap_net_admin+ep /usr/sbin/tcpdump
+   47  cat /etc/ssh/denied_users
+   48  grep pam_listfile /etc/pam.d/login
+   49  curl http://192.168.1.100
+   50  sudo mount /data/mephi-web
+   51  history > ~/project_history.txt
+   52  cp ~/project_history.txt /mnt/share/Popitka2/
+   53  sudo restorecon -Rv /data/mephi-web
+   54  sudo mkfs.ext4 -n /dev/sdbl
+   55  sudo mkfs.ext4 -n /dev/sdb1
+   56  sudo mkfs.ext4 -n /dev/sdbl
+   57  history > ~/project_history.txt

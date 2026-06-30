@@ -1,14 +1,9 @@
-PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
-
---- 192.168.1.1 ping statistics ---
-4 packets transmitted, 0 received, 100% packet loss, time 3084ms
-
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=255 time=23.1 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=255 time=24.1 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=255 time=24.2 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=255 time=24.8 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=255 time=18.5 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=255 time=20.3 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=255 time=20.7 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=255 time=20.9 ms
 
 --- 8.8.8.8 ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3022ms
-rtt min/avg/max/mdev = 23.116/24.074/24.810/0.609 ms
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 18.501/20.112/20.903/0.954 ms
